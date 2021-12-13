@@ -1,5 +1,5 @@
-# Implement-for-Color-Balance-and-Fusion-for-Underwater-Image-Enhancement
-Unofficial implement for article Color Balance and Fusion for Underwater Image Enhancement.
+# Implementation-for-Color-Balance-and-Fusion-for-Underwater-Image-Enhancement
+Unofficial implementation for article Color Balance and Fusion for Underwater Image Enhancement.
 
 ![Overview of dehazing scheme](/dehazing_scheme.jpg)
 
