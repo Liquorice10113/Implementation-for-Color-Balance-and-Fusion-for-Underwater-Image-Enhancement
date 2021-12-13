@@ -198,12 +198,12 @@ img1 = gamma_correction(img)
 img2 = sharpen(img)
 
 # 计算权重图(weight maps)
-(WL1, WS1, WE1) = weight_maps(img1)
-(WL2, WS2, WE2) = weight_maps(img2)
+(WL1, WS1, WSat1) = weight_maps(img1)
+(WL2, WS2, WSat2) = weight_maps(img2)
 
 # 正规化后的权重图
-W1 = (WL1 + WS1 + WE1)/(WL1 + WS1 + WE1 + WL2 + WS2 + WE2)
-W2 = (WL2 + WS2 + WE2)/(WL1 + WS1 + WE1 + WL2 + WS2 + WE2)
+W1 = (WL1 + WS1 + WSat1)/(WL1 + WS1 + WSat1 + WL2 + WS2 + WSat2)
+W2 = (WL2 + WS2 + WSat2)/(WL1 + WS1 + WSat1 + WL2 + WS2 + WSat2)
 
 # 多尺度融合
 W1 = gaussian_pyramid(W1, 5)
