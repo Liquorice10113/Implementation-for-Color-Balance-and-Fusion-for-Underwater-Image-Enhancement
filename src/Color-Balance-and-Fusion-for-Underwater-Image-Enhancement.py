@@ -176,13 +176,13 @@ def split_rgb(img):
 
 def pyramid_op(img):
     (R, G, B) = split_rgb(img)
-    gauss_pyr_imager = gaussian_pyramid(R)
-    gauss_pyr_imageg = gaussian_pyramid(G)
-    gauss_pyr_imageb = gaussian_pyramid(B)
-    r = lapl_pyramid(gauss_pyr_imager)
-    g = lapl_pyramid(gauss_pyr_imageg)
-    b = lapl_pyramid(gauss_pyr_imageb)
-    return r, g, b
+    R = gaussian_pyramid(R)
+    G = gaussian_pyramid(G)
+    B = gaussian_pyramid(B)
+    R = lapl_pyramid(R)
+    G = lapl_pyramid(G)
+    B = lapl_pyramid(B)
+    return R, G, B
 
 
 # 读取图像
