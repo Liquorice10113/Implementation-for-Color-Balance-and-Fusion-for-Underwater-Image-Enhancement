@@ -222,15 +222,15 @@ B = collapse(B)
 
 # 结果
 R[R < 0] = 0
-R[R > 256] = 256
+R[R > 255] = 255
 R = np.array(R, np.uint8)
 
 G[G < 0] = 0
-G[G > 256] = 256
+G[G > 255] = 255
 G = np.array(G, np.uint8)
 
 B[B < 0] = 0
-B[B > 256] = 256
+B[B > 255] = 255
 B = np.array(B, np.uint8)
 
 result = cv2.merge([B, G, R])  # opencv的颜色通道顺序为BGR
